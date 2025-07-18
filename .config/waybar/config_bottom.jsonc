@@ -1,0 +1,105 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "spacing": 0,
+  "height": 60,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/launcher",
+    "custom/filebrowser",
+    "custom/clipboard",
+    "custom/snippet",
+    "tray"
+    // "custom/spotify",
+    // "custom/spotify_prev",
+    // "custom/spotify_next"
+  ],
+
+  "modules-center": [],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "battery",
+    "network",
+    "pulseaudio",
+    "custom/power"
+  ],
+
+  "cpu": {
+    "format": " {usage}%",  // ← 正方形チップ風アイコンに変更
+    "tooltip": false
+  },
+  "memory": {
+    "format": " {used:0.1f}G",  // ← 細長いRAM風アイコンに変更
+    "tooltip": false
+  },
+  "battery": {
+    "format": " {capacity}%",
+    "format-charging": " {capacity}%",
+    "tooltip": false
+  },
+  "network": {
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": " {ipaddr}",
+    "format-disconnected": "󰖪",
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": " muted",
+    "tooltip": false
+  },
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
+  },
+
+  "tray": {
+    "spacing": 10
+  },
+
+  "custom/launcher": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/launchers/launcher.sh &"
+  },
+  "custom/filebrowser": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/filebrowser/filebrowser.sh &"
+  },
+  "custom/clipboard": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/clipboard/clipboard.sh &"
+  },
+  "custom/snippet": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/snippet/snippet.sh &"
+  }
+
+  // Spotify関係は無効化中
+  /*
+  ,
+  "custom/spotify": {
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/spotify_status.sh",
+    "interval": 1,
+    "on-click": "playerctl play-pause"
+  },
+  "custom/spotify_prev": {
+    "exec": "~/.config/waybar/scripts/spotify_prev.sh",
+    "interval": 1,
+    "on-click": "playerctl previous"
+  },
+  "custom/spotify_next": {
+    "exec": "~/.config/waybar/scripts/spotify_next.sh",
+    "interval": 1,
+    "on-click": "playerctl next"
+  }
+  */
+}
+

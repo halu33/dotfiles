@@ -1,0 +1,9 @@
+env:
+  TEAM: xterm-256color
+  WINIT_UNIX_BACKEND: x11
+
+font:
+  normal:
+    family: "Noto Sans Mono CJK JP"  # ← 日本語対応フォント推奨
+    size: 13.2                       # ← もとのサイズ10〜11を1.2倍相当
+

@@ -1,0 +1,15 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 60,
+
+  "modules-center": ["clock"],
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%Y-%m-%d %H:%M:%S}",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/show_calendar.sh"
+  }
+}
+
