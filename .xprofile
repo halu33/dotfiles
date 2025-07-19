@@ -1,14 +1,23 @@
-# ~/.xprofile
+# .xprofile
 
-# 日本語入力用の環境変数（Wayland + XWayland 両対応）
+#日本語入力：Wayland+XWayland
 export GTK_IM_MODULE=fcitx5
 export QT_IM_MODULE=fcitx5
 export XMODIFIERS=@im=fcitx5
 export SDL_IM_MODULE=fcitx5
 export GLFW_IM_MODULE=ibus
 
-# 日本語キーボード配列を XWayland にも適用
+#XWayland用 日本語キーボード設定
 setxkbmap jp
 
-# fcitx5 をバックグラウンドで起動
+#Qtスケーリング：モニター数で動的切替
+monitor_count=$(hyprctl monitors | grep -c '^Monitor ')
+if [ "$monitor_count" -eq 1 ]; then
+  export QT_SCALE_FACTOR=1.2
+else
+  export QT_SCALE_FACTOR=1.0
+fi
+
+#fcitx5の自動起動
 fcitx5 -d &
+
