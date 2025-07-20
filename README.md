@@ -1,4 +1,4 @@
-# HALU_33 dotFiles 管理リポジトリ
+# HALU_33 dotfiles 管理リポジトリ
 
 Arch Linux+Hyprland環境上の設定ファイルをGitで管理するリポジトリ
 
@@ -7,25 +7,11 @@ Arch Linux+Hyprland環境上の設定ファイルをGitで管理するリポジ�
 - `~/.bashrc` / `~/.bash_profile`
 - `~/.xinitrc` / `~/.xprofile`
 - `~/.vimrc`
-- `~/.gitconfig`
 - `~/.config/hypr/`
 - `~/.config/waybar/`
 - `~/.config/nvim/`
-- `~/.config/rofi/`
 - `~/.config/alacritty/`
-- `~/.config/geany/`
 - `~/.config/neofetch/`
-
----
-
-## 管理対象外
-
-- `~/.ssh/`：SSH秘密鍵など機密性の高いファイル
-- `~/.gnupg/`：GPG鍵
-- `~/.cache/`：アプリケーションキャッシュ
-- `~/.local/`：ユーザーローカルなバイナリ・キャッシュ等
-- `~/.bash_history`：履歴情報
-- `~/.mozilla/`, `~/.npm/` など
 
 ---
 
@@ -59,16 +45,10 @@ source ~/.bashrc
 ## dotfiles 管理Tips
 
 - `dotfiles status`：現在の差分を確認
-- `dotfiles add ~/.bashrc`：個別ファイルを追加
-- `dotfiles commit -m "Update bashrc"`：コミット
+- `dotfiles add filename`：ファイルを追加
+- `dotfiles commit -m "message"`：コミット
 - `dotfiles push`：GitHubへプッシュ
 - `dotfiles log`：履歴確認
-
----
-
-## セキュリティ注意
-
-個人情報・秘密鍵・履歴・認証情報は `.gitignore` が使えないため`add`しない**ように注意
 
 ---
 
