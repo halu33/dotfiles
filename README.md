@@ -37,7 +37,6 @@ Arch Linux+Hyprland環境上の設定ファイルをGitで管理するリポジ�
 
 ```bash
 echo "alias dotfiles='/usr/bin/git --git-dir=\$HOME/.dotfiles --work-tree=\$HOME'" >> ~/.bashrc
-source ~/.bashrc
 ```
 
 ---
