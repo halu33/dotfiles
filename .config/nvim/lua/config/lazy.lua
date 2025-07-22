@@ -1,25 +1,29 @@
--- lazy.nvim 起動とプラグイン定義
+-- lazy.nvim の初期化とプラグイン定義
+
 vim.opt.rtp:prepend("~/.config/nvim/lazy/lazy.nvim")
 
 require("lazy").setup({
-  -- 必須
+  --共通ライブラリ
   { "nvim-lua/plenary.nvim" },
 
-  -- Telescope（ファジー検索）
+  --Telescope
   { "nvim-telescope/telescope.nvim", tag = "0.1.5" },
 
-  -- Treesitter（構文ハイライト）
+  --Treesitter
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
-  -- LSP系
+  --LSP
   { "neovim/nvim-lspconfig" },
 
-  -- 補完
+  --補完エンジン
   { "hrsh7th/nvim-cmp" },
   { "hrsh7th/cmp-nvim-lsp" },
 
-  -- スニペット
+  --スニペット
   { "L3MON4D3/LuaSnip" },
   { "rafamadriz/friendly-snippets" },
+
+  --Git差分表示
+  { "lewis6991/gitsigns.nvim" },
 })
 
