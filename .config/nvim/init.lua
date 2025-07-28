@@ -18,9 +18,21 @@ require("config.treesitter")
 --LSP設定
 require("config.lsp")
 
+--git
+require("config.git")
+
 --git差分
 require("config.gitsigns")
 
 --statuscolumn
 require("config.statuscolumn")
+
+--ui
+require("config.ui")
+
+--filetree
+require("config.filetree")
+
+--terminal
+require("config.terminal")
 

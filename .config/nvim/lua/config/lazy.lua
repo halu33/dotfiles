@@ -1,4 +1,4 @@
--- lazy.nvim の初期化とプラグイン定義
+--lazy.nvim の初期化とプラグイン定義
 
 vim.opt.rtp:prepend("~/.config/nvim/lazy/lazy.nvim")
 
@@ -25,5 +25,20 @@ require("lazy").setup({
 
   --Git差分表示
   { "lewis6991/gitsigns.nvim" },
+
+  --UI系
+  { "nvim-lualine/lualine.nvim" },
+  { "lewis6991/gitsigns.nvim" },
+  { "norcalli/nvim-colorizer.lua" },
+  { "nvim-tree/nvim-web-devicons", lazy=true },
+  { "romgrk/barbar.nvim" },
+  { "akinsho/toggleterm.nvim", version = "*" },
+
+  --ファイルツリー
+  { "lambdalisue/fern.vim" },
+
+  --Git操作
+  { "tpope/vim-fugitive" },
+  { "kdheepak/lazygit.nvim" },
 })
 
