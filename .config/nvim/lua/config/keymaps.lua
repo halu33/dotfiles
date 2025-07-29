@@ -21,3 +21,6 @@ keymap("n", "<C-l>", "<C-w>l")
 keymap({ "n", "v" }, "x", '"_x', { desc = "レジスタを汚さず削除" })
 keymap({ "n", "v" }, "d", '"_d', { desc = "レジスタを汚さず削除" })
 
+--ヤンクの設定 システムクリップボード
+vim.keymap.set("n","+y",'"+yy', {noremap=true, desc="行をクリップボードにコピー"})
+
