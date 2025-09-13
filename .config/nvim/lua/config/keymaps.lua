@@ -24,3 +24,7 @@ keymap({ "n", "v" }, "d", '"_d', { desc = "レジスタを汚さず削除" })
 --ヤンクの設定 システムクリップボード
 vim.keymap.set("n","+y",'"+yy', {noremap=true, desc="行をクリップボードにコピー"})
 
+--マークダウンプレビューの設定
+vim.api.nvim_create_user_command("Mdp", "MarkdownPreview", {})
+vim.keymap.set("n", "<leader>Mdp", ":MarkdownPreview<CR>", {desc = "Markdownプレビュー開始"})
+

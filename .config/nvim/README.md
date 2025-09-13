@@ -18,11 +18,16 @@
 | カラーコード表示 | [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua) |
 | ファジーファイル検索 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) |
 | 統合ターミナル | [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) |
+| Markdownプレビュー | [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) |
+| CSV整形表示 | [csv.vim](https://github.com/chrisbra/csv.vim) |
 
 ---
 
 ## leaderキー
+
 `<leader> = spaceキー`
+
+---
 
 ## ショートカット
 
@@ -52,6 +57,14 @@
 | `<leader>hb` | 現在行のblame情報表示 |
 | `[c` / `]c` | 前/次のhunkに移動 |
 
+### Markdown・CSV関連
+
+| キー操作 | 説明 |
+|----------|------|
+| `<leader>mp` | Markdownプレビュー開始（ブラウザ起動） |
+| `:Mdp` | Markdownプレビュー起動コマンド（`:MarkdownPreview` の短縮） |
+| `:ArrangeColumn` | CSVファイル整形表示（csv.vim） |
+
 ### その他便利操作
 
 | キー操作 | 説明 |
@@ -73,6 +86,18 @@
 ```lua
 vim.o.statuscolumn = "%s %l %r"
 ```
+
+---
+
+
+## 注意事項
+
+- `markdown-preview.nvim` の初回起動時は、Node.js / npm が必要
+  ```bash
+  sudo pacman -S nodejs npm
+  ```
+
+- Markdownプレビューはデフォルトブラウザで開く
 
 ---
 
