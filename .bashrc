@@ -54,3 +54,18 @@ eval "$(pyenv init -)"
 #----------------------------------------
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
+#----------------------------------------
+#Golang関連
+#----------------------------------------
+export PATH=$PATH:$HOME/go/bin
+
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="PNPM_HOME:$PATH"
+
+# pnpm
+export PNPM_HOME="/home/haru/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
